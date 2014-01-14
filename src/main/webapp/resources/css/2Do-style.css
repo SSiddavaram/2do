@@ -1,0 +1,42 @@
+@CHARSET "ISO-8859-1";
+
+.title-style{
+	font-family: cursive;
+	font-size: 30pt;
+	font-style: italic;
+	color: yellow;	
+}
+
+.caption{
+	padding-left: 15%;
+	font-style: italic;
+}
+
+.last-menu-item{
+	border-right: 0px !important;
+}
+
+.last-menu-item-current{
+	border-right: 0px !important;
+	color: white;
+}
+
+.login-panel-group{
+	padding-right: 30%
+}
+
+.current{
+	color: #ffffff !important;
+}
+
+.counter-label{
+	padding-left:70px !important;
+	font-family: arial !important;
+	font-size: 12pt !important;
+}
+
+.post-scroll-panel{
+	border: none 0px !important;
+	width: 400px;
+	height: 600px;
+}

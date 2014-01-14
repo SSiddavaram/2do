@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+		<link href="../resources/css/templatemo_style.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/2Do-style.css" rel="stylesheet" type="text/css" />
+</h:head>
+<h:body>
+<h:form>
+<div id="templatemo_wrapper">
+	<div id="templatemo_content">
+	    <div id="column_left_column">
+        
+        </div> <!-- end of left column -->
+        
+        <div id="column_right_column">
+			
+            <div id="templatemo_menu">
+                <ul>
+                     <li>
+                    	<h:outputLink value="../common/homePage.xhtml">
+                    		<h:outputText value="Home" styleClass="#{commonNavigationBean.selected_menu eq todoWebConst.HOME_MENU_SELECTED ? 'current' : none}"></h:outputText>
+                   		</h:outputLink>
+                    </li>
+                    <li>
+                    	<h:outputLink value="../common/posts.xhtml">
+                    		<h:outputText value="Posts" styleClass="#{commonNavigationBean.selected_menu eq todoWebConst.POSTS_MENU_SELECTED ? 'current' : none}"></h:outputText>
+                   		</h:outputLink>
+                    </li>
+                    <li>
+                    	<h:outputLink value="../common/postToDo.xhtml">
+                    		<h:outputText value="Post a 2do" styleClass="#{commonNavigationBean.selected_menu eq todoWebConst.POST_TO_DO_MENU_SELECTED ? 'current' : none}"></h:outputText>
+                   		</h:outputLink></li>
+					<li>
+						<h:outputLink>
+                    		<h:outputText value="About" styleClass="#{commonNavigationBean.selected_menu eq todoWebConst.ABOUT_MENU_SELECTED ? 'last-menu-item-current' : 'last-menu-item'}"></h:outputText>
+                   		</h:outputLink></li>
+                   <!--  <li><a href="#" class="last">Contact</a></li> -->
+                </ul>
+            </div> <!-- end of menu -->
+            
+            <div id="templatemo_site_title">
+            	<h:graphicImage url="../resources/images/2do-mac.jpg" width="25" height="25"/>
+                	<h:outputLink value="../common/loginPage.xhtml">
+                		<h:outputText value="2Do" styleClass="title-style"></h:outputText>
+                	</h:outputLink>
+                	<br/>
+                	<h:outputText styleClass="caption" value="Tasks done in style..."></h:outputText>
+         	</div>
+         	<p:messages></p:messages>
+         	 <h:panelGroup styleClass="login-panel-group">
+         		<h:outputLabel for="post_title" value="Post Title :" style="padding-right:20px"/>  
+            	<p:inputText style="padding-left:20px" id="post_title" value="#{todoPostBean.post_title}" required="true" requiredMessage="Title required"/> 
+            </h:panelGroup>
+             <br/><br/>
+         	<h:panelGroup styleClass="login-panel-group">
+         		<h:outputLabel for="post_desc" value="Post desc:" style="padding-right:15px"/>  
+            	<p:inputTextarea style="padding-left:20px" id="post_desc" required="true" value="#{todoPostBean.post_desc}"  
+            	requiredMessage="Post desc required" rows="5" cols="40" counter="counter" maxlength="300" 
+            	counterTemplate="{0} characters remaining." autoResize="false"/> <br/>
+            	<h:outputText id="counter" styleClass="counter-label"/> 
+            </h:panelGroup>
+            <br/><br/>
+            <h:panelGroup styleClass="login-panel-group">
+         		<h:outputLabel for="post_due_date" value="Post due date :" style="padding-right:10px"/> 
+            	<h:outputText id="post_due_date"/> &nbsp;&nbsp; 
+            	<p:calendar id="scenarioCal" value="#{todoPostBean.post_due_date}"
+				showOn="button" pattern="MM/dd/yyyy" required="true"
+				requiredMessage="Date Required" >
+						<p:ajax update="post_due_date"></p:ajax>
+				</p:calendar>
+            </h:panelGroup>
+             <br/><br/>
+            
+            <div class="button_01"><h:commandLink style="color:white" value="Save" action="#{todoPostBean.createTodoPost}"></h:commandLink></div>
+            
+            <div class="cleaner_h30"></div>
+          
+        </div>
+        <div class="cleaner"></div>
+    </div> <!-- end of container -->
+</div> <!-- end of wrapper -->
+<!-- end of footer -->
+</h:form>
+</h:body>
+</html>

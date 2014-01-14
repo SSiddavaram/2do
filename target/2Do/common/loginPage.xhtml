@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+		<link href="../resources/css/templatemo_style.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/2Do-style.css" rel="stylesheet" type="text/css" />
+</h:head>
+<h:body>
+<h:form>
+<div id="templatemo_wrapper">
+	<div id="templatemo_content">
+	    <div id="column_left_column">
+<!-- <div class="section_w470">
+            	
+                <h2>2Do</h2>
+                
+
+                <div class="button_01"><a href="#">login</a></div>
+                
+            </div> -->
+        
+        </div> <!-- end of left column -->
+        
+        <div id="column_right_column">
+			
+           <!--  <div id="templatemo_menu">
+                <ul>
+                    <li><a href="#" class="current">Home</a></li>
+                    <li><a href="#">Posts</a></li>
+                    <li><a href="#">Post a 2Do</a></li>
+					<li><a href="#" class="last-menu-item">About</a></li>
+                    <li><a href="#" class="last">Contact</a></li>
+                </ul>
+            </div> end of menu -->
+            
+            <h:panelGroup layout="block" style="padding-left:10%;">
+		            <h:panelGroup layout="block" id="templatemo_site_title" style="padding-top: 30%;padding-bottom: 10%;">
+		            	<h:graphicImage url="../resources/images/2do-mac.jpg" width="25" height="25"/>
+		                	<h:outputLink value="../common/loginPage.xhtml">
+		                		<h:outputText value="2Do" styleClass="title-style"></h:outputText>
+		                	</h:outputLink>
+		                	<br/>
+		                	<h:outputText styleClass="caption" value="Tasks done in style..."></h:outputText>
+		         	</h:panelGroup>
+		         	<p:messages></p:messages>
+		         	<h:panelGroup styleClass="login-panel-group">
+		         		<h:outputLabel for="name" value="Username:" style="padding-right:15px"/>  
+		            	<p:inputText style="padding-left:20px" id="name" required="true" value="#{userBean.username}" requiredMessage="Username required"/> 
+		            </h:panelGroup>
+		            <br/><br/>
+		            <h:panelGroup styleClass="login-panel-group">
+		         		<h:outputLabel for="pwd" value="Password:" style="padding-right:20px"/>  
+		            	<p:password style="padding-left:20px" id="pwd" required="true" value="#{userBean.password}" requiredMessage="Password required"/> 
+		            </h:panelGroup>
+		             <br/><br/>
+		            <div class="button_01"><h:commandLink style="color:white" action="#{userBean.loginAction}" value="login"></h:commandLink></div>
+		            <div class="button_01">
+		            	<h:outputLink value="../common/signUp.xhtml">
+		            			<h:outputText style="color:white" value="Sign up"></h:outputText>
+		            	</h:outputLink>
+		            </div>
+            </h:panelGroup>
+            <div class="cleaner_h30"></div>
+          
+        </div>
+        <div class="cleaner"></div>
+    </div> <!-- end of container -->
+</div> <!-- end of wrapper -->
+<!-- end of footer -->
+</h:form>
+</h:body>
+</html>

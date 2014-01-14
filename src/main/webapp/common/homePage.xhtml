@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:o="http://omnifaces.org/ui">
+<h:head>
+		<link href="../resources/css/templatemo_style.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/2Do-style.css" rel="stylesheet" type="text/css" />
+</h:head>
+<h:body>
+<h:form>
+<o:importConstants type="com.todo.util.TodoWebConstants" var="todoWebConst"></o:importConstants>
+<div id="templatemo_wrapper">
+	<div id="templatemo_content">
+	    <div id="column_left_column">
+<!-- <div class="section_w470">
+            	
+                <h2>2Do</h2>
+                
+
+                <div class="button_01"><a href="#">login</a></div>
+                
+            </div> -->
+        
+        </div> <!-- end of left column -->
+        
+        <div id="column_right_column">
+			
+            <div id="templatemo_menu">
+                <ul>
+                    <li>
+                    	<h:outputLink value="../common/homePage.xhtml">
+                    		<h:outputText value="Home" styleClass="#{commonNavigationBean.selected_menu eq todoWebConst.HOME_MENU_SELECTED ? 'current' : none}"></h:outputText>
+                   		</h:outputLink>
+                    </li>
+                    <li>
+                    	<h:outputLink value="../common/posts.xhtml">
+                    		<h:outputText value="Posts" styleClass="#{commonNavigationBean.selected_menu eq todoWebConst.POSTS_MENU_SELECTED ? 'current' : none}"></h:outputText>
+                   		</h:outputLink>
+                    </li>
+                    <li>
+                    	<h:outputLink value="../common/postToDo.xhtml">
+                    		<h:outputText value="Post a 2do" styleClass="#{commonNavigationBean.selected_menu eq todoWebConst.POST_TO_DO_MENU_SELECTED ? 'current' : none}"></h:outputText>
+                   		</h:outputLink></li>
+					<li>
+						<h:outputLink>
+                    		<h:outputText value="About" styleClass="#{commonNavigationBean.selected_menu eq todoWebConst.ABOUT_MENU_SELECTED ? 'last-menu-item-current' : 'last-menu-item'}"></h:outputText>
+                   		</h:outputLink></li>
+                   <!--  <li><a href="#" class="last">Contact</a></li> -->
+                </ul>
+            </div> <!-- end of menu -->
+            
+            <div id="templatemo_site_title">
+            	<h:graphicImage url="../resources/images/2do-mac.jpg" width="25" height="25"/>
+                	<h:outputLink value="../common/loginPage.xhtml">
+                		<h:outputText value="2Do" styleClass="title-style"></h:outputText>
+                	</h:outputLink>
+                	<br/>
+                	<h:outputText styleClass="caption" value="Tasks done in style..."></h:outputText>
+         	</div>
+         	
+            WELCOME <h:outputText value="#{userContextBean.userContext.user_display_name}"></h:outputText>
+            <div class="cleaner_h30"></div>
+          
+        </div>
+        <div class="cleaner"></div>
+    </div> <!-- end of container -->
+</div> <!-- end of wrapper -->
+<!-- end of footer -->
+</h:form>
+</h:body>
+</html>
